@@ -1,0 +1,6 @@
+body { font-family: Verdana; font-size: 14px; margin: 15px 25px; }
+h2, h3, th { font-weight: normal; }
+h2 { border-bottom: 1px solid black; padding-bottom: 5px; }
+.menu { float: right; }
+table { border-collapse: collapse; margin: 8px 0 20px; }
+th, td, input, select, button { border: 1px solid black; padding: 5px; font: inherit; }
