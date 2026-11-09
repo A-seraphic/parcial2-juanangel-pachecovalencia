@@ -25,6 +25,7 @@
 <h3>Medicos</h3>
 <p>Nombre <input id="mNombre">
    Usuario <input id="mUsuario">
+   Contraseña <input id="mClave" type="password">
    <button onclick="guardarMedico()">Guardar medico</button>
    <button onclick="limpiarMedico()">Cancelar</button></p>
 <table>
@@ -61,7 +62,7 @@ function cargarMedicos() {
 }
 
 function guardarMedico() {
-    let datos = { nombre: el("mNombre").value, usuario: el("mUsuario").value };
+    let datos = { nombre: el("mNombre").value, usuario: el("mUsuario").value, clave: el("mClave").value };
     enviar(idMedico ? "/api/medicos/" + idMedico : "/api/medicos", idMedico ? "PUT" : "POST", datos, () => { limpiarMedico(); cargarMedicos(); cargarConsultas(); });
 }
 
@@ -80,6 +81,7 @@ function limpiarMedico() {
     idMedico = null;
     el("mNombre").value = "";
     el("mUsuario").value = "";
+    el("mClave").value = "";
 }
 
 function cargarConsultas() {
